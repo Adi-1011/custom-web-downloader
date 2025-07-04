@@ -1,6 +1,6 @@
 # Custom Web Downloader
 
-🎬 A desktop GUI app to download and re-encode YouTube videos for Premiere Pro.
+🎬 A desktop GUI app to download and re-encode YouTube videos or any other open source web videos supported by yt-dlp
 
 ## Features
 - One-click video download
