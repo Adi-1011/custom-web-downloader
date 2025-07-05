@@ -68,7 +68,7 @@ def start_download():
     threading.Thread(target=threaded_download, daemon=True).start()
 
 def dark_button(master, **kwargs):
-    # Only set defaults if they are NOT passed by the user
+    # Only set defaults if they are NOT passed by the userS
     kwargs.setdefault("bg", "#3a3a3a")
     kwargs.setdefault("fg", "#ffffff")
     kwargs.setdefault("activebackground", "#555555")
@@ -86,7 +86,8 @@ settings = load_settings()
 
 # GUI starts here
 root = tk.Tk()
-root.iconbitmap(resource_path("icon.ico"))
+root.iconbitmap(default=resource_path("icon.ico"))
+
 root.title("Custom Web Downloader")
 root.geometry("700x350")
 root.configure(bg=dark_bg)

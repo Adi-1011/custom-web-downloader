@@ -1,6 +1,15 @@
 import yt_dlp
 import subprocess
 import os
+import sys
+
+def get_ffmpeg_path():
+    if getattr(sys, 'frozen', False):  # Running as bundled .exe
+        base_path = sys._MEIPASS
+    else:
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, "assets", "ffmpeg.exe")
 
 def custom_download(url, download_path, filename="video_output", progress_callback = None):
     temp_file = "__temp_download"
@@ -11,12 +20,14 @@ def custom_download(url, download_path, filename="video_output", progress_callba
     print(f"💾 Output: {filename}.mp4")
 
     # Get absolute path to bundled ffmpeg
-    ffmpeg_exe = os.path.abspath(os.path.join("assets","ffmpeg.exe"))
+
+    ffmpeg_exe = get_ffmpeg_path()
 
     def hook(d):
         try:
             if d['status'] == 'downloading':
                 downloaded_bytes = d.get('downloaded_bytes', 0)
+
                 total_bytes = d.get('total_bytes') or d.get('total_bytes_estimate')
                 if downloaded_bytes and total_bytes:
                     percent = downloaded_bytes / total_bytes * 100
