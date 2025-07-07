@@ -1,20 +1,34 @@
 # Custom Web Downloader
 
-🎬 A desktop GUI app to download and re-encode YouTube videos or any other open source web videos supported by yt-dlp
+A sleek desktop GUI application to download and re-encode YouTube and other supported videos using the power of `yt-dlp` and `ffmpeg`.
 
-## Features
-- One-click video download
-- Auto re-encoding to H.264/AAC `.mp4`
-- User-selectable save folder (remembers across restarts)
-- Clean Tkinter interface
+Built with Python and Tkinter, this lightweight tool simplifies the process of downloading and converting videos to a clean `.mp4` format — no command line required.
 
-## Setup
+---
 
-```bash
-pip install -r requirements.txt
+## 🚀 Features
 
-This application uses FFmpeg under the LGPLv2.1 license.
-FFmpeg is a trademark of Fabrice Bellard.
-https://ffmpeg.org/
+- ✅ One-click video download via GUI  
+- 🎧 Automatic re-encoding to H.264/AAC `.mp4` format (Premiere Pro–ready)  
+- 💾 User-defined download folder, saved across sessions via `settings.json`  
+- 🌙 Dark mode UI with custom-styled buttons and progress bar  
+- 📁 Installer build available for Windows (with embedded icon + shortcut support)  
+- 🔗 Supports hundreds of video platforms — all supported by `yt-dlp`  
+- 🛠️ Bundled FFmpeg path detection (no system install required)  
+- 🔒 Error handling for missing FFmpeg, failed downloads, and file access  
 
-“To use this app, place ffmpeg.exe from https://www.gyan.dev/ffmpeg/builds/ into the assets/ folder.”
+---
+
+## 🔖 License & Attribution
+
+This project uses:
+
+- `yt-dlp` – MIT License  
+- `FFmpeg` – [LGPL v2.1 License](https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html)  
+  *FFmpeg is a trademark of Fabrice Bellard.*
+
+---
+
+## ⚙️ Setup
+
+The setup process will be added soon...
